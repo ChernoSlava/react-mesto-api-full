@@ -39,8 +39,12 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({});
   const [cardForDelete, setCardForDelete] = useState({});
   const [currentUser, setCurrentUser] = useState({});
+  const [isAuth, setAuth] = useState(false);
 
   useEffect(() => {
+    if (!isAuth) {
+      return;
+    }
     Promise.all([api.getUserInfoFromServer(), api.getCards()])
 
       .then(([user, cards]) => {
@@ -50,7 +54,7 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [isAuth]);
 
   function handlerUpdateUser(data) {
     setIsLoading(true);
@@ -220,6 +224,7 @@ function App() {
         setLoggedIn(true);
         localStorage.setItem("jwt", data.token);
         setAuthorizatUserEmail(values.email);
+        setAuth(true);
         history.push("/");
       })
       .catch((err) => {

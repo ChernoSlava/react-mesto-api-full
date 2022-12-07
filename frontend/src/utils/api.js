@@ -12,7 +12,8 @@ class Api {
   }
 
   _request(url, options) {
-    return fetch(url, options).then(this._checkResponse);
+    const token = localStorage.getItem("jwt");
+    return fetch(url, {...options, headers: {...options.headers, Authorization: `Bearer ${token}`}}).then(this._checkResponse);
   }
 
   setUserAvatarToServer(avatar) {
