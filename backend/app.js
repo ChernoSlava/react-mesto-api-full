@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const { errors } = require('celebrate');
 const console = require('console');
+const cors = require('cors');
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
@@ -14,6 +15,19 @@ const router = require('./routes/index');
 
 const { PORT = 3000 } = process.env;
 const app = express();
+
+app.use(cors(
+  {
+    origin: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  },
+));
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 app.use(express.json());
 

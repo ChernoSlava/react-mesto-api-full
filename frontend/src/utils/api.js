@@ -87,9 +87,8 @@ class Api {
 }
 
 const api = new Api({
-  url: "https://mesto.nomoreparties.co/v1/cohort-48",
+  url: "https://mesto.chernoslava.nomoredomains.club",
   headers: {
-    authorization: "1b4bc79c-4655-4b7c-ab14-ef593343b332",
     "Content-Type": "application/json",
   },
 });

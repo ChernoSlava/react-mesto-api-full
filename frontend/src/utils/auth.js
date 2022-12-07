@@ -48,7 +48,7 @@ class Auth {
 }
 
 const auth = new Auth({
-  baseUrl: "https://auth.nomoreparties.co",
+  baseUrl: "https://api.mesto.chernoslava.nomoredomains.club",
   headers: {
     "Content-Type": "application/json",
   },
