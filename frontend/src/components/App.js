@@ -180,7 +180,7 @@ function App() {
     auth
       .checkToken(token)
       .then((res) => {
-        setAuthorizatUserEmail(res.data.email);
+        setAuthorizatUserEmail((res.data || res).email);
         setLoggedIn(true);
         history.push("/");
       })
