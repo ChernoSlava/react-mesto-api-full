@@ -47,11 +47,19 @@ class Auth {
   }
 }
 
+// const auth = new Auth({
+//   baseUrl: "https://api.mesto.chernoslava.nomoredomains.club",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// });
+
 const auth = new Auth({
-  baseUrl: "https://api.mesto.chernoslava.nomoredomains.club",
+  baseUrl: "http://localhost:3000",
   headers: {
     "Content-Type": "application/json",
   },
 });
+
 
 export default auth;

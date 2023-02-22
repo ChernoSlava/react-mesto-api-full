@@ -74,3 +74,69 @@ ___
 ### Репозиторий с проектом на чистом JavaScript => [Mesto: Vanilla JS](https://github.com/ChernoSlava/Mesto)
 
 ### Репозиторий с Frontend частью проекта => [Mesto: Frontend](https://github.com/ChernoSlava/react-mesto-auth)
+
+{   
+    "name": "Slava",
+    "email": "slava@mail.ru",
+    "password": "1234"
+}
+
+{
+    "_id": "63b454dd2f759e66e805cd7b",
+    "name": "Slava",
+    "email": "slava@mail.ru",
+    "__v": 0
+}
+
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I0NTRkZDJmNzU5ZTY2ZTgwNWNkN2IiLCJpYXQiOjE2NzI3NjI2OTAsImV4cCI6MTY3MzM2NzQ5MH0.pxtYRhisiUq5JrZ7cAsaPGjIWjdegaPFy3-3l6gP6ws"
+
+{   
+    "country": "Russia",
+    "director": "Slava",
+    "duration": 120,
+    "year": "1994",
+    "description": "Adventure to Russia",
+    "image": "https://img3.akspic.ru/previews/9/6/1/9/6/169169/169169-ty_zasluzhivaesh_vsyacheskogo_schastya-schaste-strah-voda-polety_na_vozdushnom_share-500x.jpg",
+    "trailerLink": "https://www.youtube.com/watch?v=6DR1SqPYWCo",
+    "thumbnail": "https://img3.akspic.ru/previews/9/6/1/9/6/169169/169169-ty_zasluzhivaesh_vsyacheskogo_schastya-schaste-strah-voda-polety_na_vozdushnom_share-500x.jpg",
+    "movieId": 16,
+    "nameRU": "Приключение в Россию",
+    "nameEN": "Adventure to Russia"
+}
+
+movie
+{
+    "_id": "63b46482e14f7f01309f12a6",
+    "country": "Russia",
+    "director": "Slava",
+    "duration": 120,
+    "year": "1994",
+    "description": "Adventure to Russia",
+    "image": "https://img3.akspic.ru/previews/9/6/1/9/6/169169/169169-ty_zasluzhivaesh_vsyacheskogo_schastya-schaste-strah-voda-polety_na_vozdushnom_share-500x.jpg",
+    "trailerLink": "https://www.youtube.com/watch?v=6DR1SqPYWCo",
+    "thumbnail": "https://img3.akspic.ru/previews/9/6/1/9/6/169169/169169-ty_zasluzhivaesh_vsyacheskogo_schastya-schaste-strah-voda-polety_na_vozdushnom_share-500x.jpg",
+    "movieId": 16,
+    "nameRU": "Приключение в Россию",
+    "nameEN": "Adventure to Russia",
+    "owner": "63b454dd2f759e66e805cd7b",
+    "__v": 0
+}
+
+
+
+ {
+        "_id": "63b466a4e14f7f01309f12af",
+        "country": "USA2",
+        "director": "Slavaaaa, you should stop222!!!",
+        "duration": 12020,
+        "year": "20232",
+        "description": "Adventure to California",
+        "image": "https://img3.akspic.ru/previews/9/6/1/9/6/169169/169169-ty_zasluzhivaesh_vsyacheskogo_schastya-schaste-strah-voda-polety_na_vozdushnom_share-500x.jpg",
+        "trailerLink": "https://www.youtube.com/watch?v=6DR1SqPYWCo",
+        "thumbnail": "https://img3.akspic.ru/previews/9/6/1/9/6/169169/169169-ty_zasluzhivaesh_vsyacheskogo_schastya-schaste-strah-voda-polety_na_vozdushnom_share-500x.jpg",
+        "movieId": 22,
+        "nameRU": "Приключение в Калифорнии",
+        "nameEN": "Adventure to California",
+        "owner": "63b454dd2f759e66e805cd7b",
+        "__v": 0
+    }
