@@ -1,0 +1,145 @@
+.header {
+  padding-top: 40px;
+  max-width: 880px;
+  min-height: 74px;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+
+  @media screen and (max-width: 1023px) {
+    padding: 28px 27px 32px 27px;
+  }
+
+  &__address {
+    font-family: 'Inter', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    padding: 9px 0;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 24px;
+    }
+  }
+
+  &__burger-btn {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    background: url(../images/BurgerMenu.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: transparent;
+    cursor: pointer;
+    transition: opacity 0.4s ease-out;
+
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    @media screen and (min-width: 768px) {
+      visibility: hidden;
+    }
+
+    &_opened {
+      background-image: url(../images/CloseBurgerIco.svg);
+    }
+  }
+
+  &__container {
+    display: none;
+    margin: 0 auto;
+    padding: 31px 0;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_opened {
+      @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__exitBtn {
+    padding: 0;
+    margin: 9px 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-style: normal;
+    font-weight: normal;
+    cursor: pointer;
+    color: #a9a9a9;
+    background: unset;
+    border: unset;
+  }
+
+  &__line {
+    max-width: 100%;
+    opacity: 0.7;
+    border: 1px solid rgba(84, 84, 84, .7);
+  }
+
+  &__logo {
+    max-width: 142px;
+    min-height: 33px;
+
+    @media screen and (max-width: 1000px) {
+      padding-left: 27px;
+    }
+
+    @media screen and (max-width: 720px) {
+      max-width: 103px;
+    }
+  }
+
+  &__main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__navlink {
+    font-family: "Inter", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.4s ease-out;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.6;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &_burger {
+    @media screen and (min-width: 768px) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+}

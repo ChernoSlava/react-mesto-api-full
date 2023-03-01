@@ -25,7 +25,7 @@ export default function Login({ onAuthorization }) {
           value={values.email || ""}
         ></input>
         <input
-          className="auth__input second"
+          className="auth__input"
           name="password"
           placeholder="Пароль"
           autoComplete="off"

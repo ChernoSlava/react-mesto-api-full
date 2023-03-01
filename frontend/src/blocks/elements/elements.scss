@@ -3,29 +3,26 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 20px;
-  -moz-column-gap: 17px;
-       column-gap: 17px;
+  column-gap: 17px;
   padding-top: 50px;
   padding-left: 15.6%;
   padding-right: 15.6%;
   justify-content: center;
   list-style-type: none;
   margin: auto;
-}
-@media screen and (max-width: 1024px) {
-  .elements {
+
+  @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
-}
-@media screen and (max-width: 600px) {
-  .elements {
+
+  @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
     justify-items: center;
   }
-}
-@media screen and (max-width: 320px) {
-  .elements {
+
+
+  @media screen and (max-width: 320px) {
     width: 282px;
   }
-}/*# sourceMappingURL=elements.css.map */
+}

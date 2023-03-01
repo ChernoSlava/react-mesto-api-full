@@ -1,0 +1,97 @@
+.element {
+  max-width: 282px;
+  min-height: 361px;
+  background: #ffffff;
+  border-radius: 10px;
+  justify-content: space-between;
+  position: relative;
+
+  &__title {
+    margin: 0;
+    max-width: 224px;
+    min-height: 23px;
+    font-family: "Inter", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    align-self: center;
+  }
+
+  &__number {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15.73px;
+    color: #000000;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    padding-left: 21px;
+    padding-right: 15px;
+    padding-top: 25px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__image {
+    min-height: 282px;
+    width: 282px;
+    height: 282px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__heart {
+    width: 22px;
+    height: 19px;
+    background-image: url(../images/__heart.svg);
+    background-repeat: no-repeat;
+    border: 0;
+    background-color: transparent;
+    align-self: center;
+    overflow: visible;
+
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+  &__heart_active {
+    background-image: url(../images/Union.svg);
+  }
+  
+  &__delete-button {
+    background-image: url(../images/delete-button-top.svg);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 19px;
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  &__delete-button_hidden {
+    display: none;
+  }
+  
+}
