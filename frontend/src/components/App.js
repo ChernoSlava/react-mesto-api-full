@@ -1,8 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useHistory, Route, Switch } from "react-router-dom";
 
-import ".././index.css";
-
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";

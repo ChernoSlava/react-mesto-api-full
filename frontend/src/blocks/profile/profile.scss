@@ -1,3 +1,5 @@
+@import '../../sass/variables.scss';
+
 .profile {
   padding-top: 40px;
   display: grid;
@@ -23,7 +25,7 @@
     margin: 0;
     max-width: 294px;
     min-height: 39px;
-    font-family: "Inter", "Helvetica", "Arial", sans-serif;
+    font-family: $mainFont;
     font-style: normal;
     font-weight: 500;
     font-size: 42px;
@@ -44,7 +46,7 @@
     max-width: 336px;
     min-height: 18px;
     margin: 0;
-    font-family: "Inter", "Helvetica", "Arial", sans-serif;
+    font-family: $mainFont;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -95,7 +97,7 @@
     width: 120px;
     height: 120px;
     min-width: 120px;
-    background: #c4c4c4;
+    background: $greyAvatarElColor;
     border-radius: 50%;
     object-fit: cover;
     object-position: 50%;
@@ -125,7 +127,7 @@
       z-index: 20;
       transition: 1s;
       opacity: .6;
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: $blackOpacityHover;
       background-image: url(../images/avatar-button.svg);
       background-position: center;
       background-repeat: no-repeat;
@@ -146,7 +148,7 @@
     background-image: url(../images/Vector.svg);
     background-repeat: no-repeat;
     background-position: center;
-    outline: 2px solid #fff;
+    outline: 2px solid $whiteColor;
     align-self: center;
 
     &:hover {

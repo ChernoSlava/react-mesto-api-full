@@ -1,7 +1,9 @@
+@import '../../sass/variables.scss';
+
 .elements {
   max-width: 900px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: $largeScreen;
   row-gap: 20px;
   column-gap: 17px;
   padding-top: 50px;
@@ -12,12 +14,12 @@
   margin: auto;
 
   @media screen and (max-width: 1024px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: $middleScreen;
     justify-items: center;
   }
 
   @media screen and (max-width: 600px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: $smallScreen;
     justify-items: center;
   }
 

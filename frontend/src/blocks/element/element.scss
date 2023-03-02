@@ -1,7 +1,9 @@
+@import '../../sass/variables.scss';
+
 .element {
   max-width: 282px;
   min-height: 361px;
-  background: #ffffff;
+  background: $whiteColor;
   border-radius: 10px;
   justify-content: space-between;
   position: relative;
@@ -10,12 +12,12 @@
     margin: 0;
     max-width: 224px;
     min-height: 23px;
-    font-family: "Inter", "Helvetica", "Arial", sans-serif;
+    font-family: $mainFont;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
-    color: #000000;
+    color: $blackColor;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -27,7 +29,7 @@
     font-weight: normal;
     font-size: 13px;
     line-height: 15.73px;
-    color: #000000;
+    color: $blackColor;
     margin: 0;
     text-align: center;
   }

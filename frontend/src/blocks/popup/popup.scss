@@ -7,7 +7,7 @@
   align-items: center;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: $blackOpacityColor;
   z-index: 35;
   opacity: 0;
   visibility: hidden;
@@ -46,7 +46,7 @@
   &__container {
     width: 430px;
     min-height: 330px;
-    background-color: white;
+    background-color: $whiteColor;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -65,10 +65,10 @@
 
   &__description {
     max-width: 358px;
-    font-family: "Inter", Arial, sans-serif;
+    font-family: $cutFont;
     font-style: normal;
     font-size: 24px;
-    color: #000000;
+    color: $blackColor;
     text-align: center;
     margin: 0 auto;
     font-weight: 900;
@@ -84,7 +84,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #000000;
+    color: $blackColor;
     border: 0;
     outline: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -109,7 +109,7 @@
     }
 
     &_type_error {
-      border-bottom-color: red;
+      border-bottom-color: $redColor;
     }
 
     &_type_job {
@@ -144,13 +144,13 @@
   }
 
   &__field-error {
-    font-family: 'Inter';
+    font-family: $InterFont;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
     visibility: hidden;
-    color: #FF0000;
+    color: $redColor;
     margin-left: 36px;
     min-height: 30px;
 
@@ -185,13 +185,13 @@
 
   &__image-title {
     margin: 0;
-    font-family: "Inter", "Helvetica", "Arial", sans-serif;
+    font-family: $mainFont;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
     margin-top: 10px;
-    color: #ffffff;
+    color: $whiteColor;
   }
 
   &__set {
@@ -205,8 +205,8 @@
     margin-left: 36px;
     max-width: 358px;
     height: 50px;
-    color: #fff;
-    background-color: #000;
+    color: $whiteColor;
+    background-color: $blackColor;
     border-radius: 2px;
     outline: none;
     border: 0;
@@ -218,8 +218,8 @@
 
     &:disabled {
       background-color: transparent;
-      color: #e5e5e5;
-      border: 1px solid #e5e5e5;
+      color: $whiteDisabledColor;
+      border: 1px solid $whiteDisabledColor;
       border-radius: 2px;
       cursor: default;
     }
@@ -245,7 +245,7 @@
 
   &__title {
     margin: 0;
-    color: #000;
+    color: $blackColor;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -265,8 +265,4 @@
     visibility: visible;
     opacity: 1;
   }
-}
-
-.image-popup {
-  background-color: rgba(0, 0, 0, 0.9);
 }

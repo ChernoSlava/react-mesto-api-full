@@ -1,3 +1,5 @@
+@import '../../sass/variables.scss';
+
 .header {
   padding-top: 40px;
   max-width: 880px;
@@ -6,14 +8,14 @@
   margin: auto;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  border-bottom: 1px solid $greyBorderColor;
 
   @media screen and (max-width: 1023px) {
     padding: 28px 27px 32px 27px;
   }
 
   &__address {
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: $cutFont;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -77,13 +79,13 @@
   &__exitBtn {
     padding: 0;
     margin: 9px 0;
-    font-family: "Inter", Arial, sans-serif;
+    font-family: $cutFont;
     font-size: 18px;
     line-height: 22px;
     font-style: normal;
     font-weight: normal;
     cursor: pointer;
-    color: #a9a9a9;
+    color: $greyColor;
     background: unset;
     border: unset;
   }
@@ -91,7 +93,7 @@
   &__line {
     max-width: 100%;
     opacity: 0.7;
-    border: 1px solid rgba(84, 84, 84, .7);
+    border: 1px solid $greyBorderColor;
   }
 
   &__logo {
@@ -114,12 +116,12 @@
   }
 
   &__navlink {
-    font-family: "Inter", Arial, sans-serif;
+    font-family: $cutFont;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: white;
+    color: $whiteColor;
     text-decoration: none;
     transition: opacity 0.4s ease-out;
 
