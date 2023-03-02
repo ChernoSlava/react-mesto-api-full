@@ -80,7 +80,7 @@
   font-style: normal;
   font-weight: normal;
   cursor: pointer;
-  color: #a9a9a9;
+  color: #545454;
   background: unset;
   border: unset;
 }
@@ -114,7 +114,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: white;
+  color: #fff;
   text-decoration: none;
   transition: opacity 0.4s ease-out;
 }

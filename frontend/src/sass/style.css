@@ -143,7 +143,7 @@
 .element {
   max-width: 282px;
   min-height: 361px;
-  background: #ffffff;
+  background: #fff;
   border-radius: 10px;
   justify-content: space-between;
   position: relative;
@@ -152,12 +152,12 @@
   margin: 0;
   max-width: 224px;
   min-height: 23px;
-  font-family: "Inter", "Helvetica", "Arial", sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
-  color: #000000;
+  color: #000;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -168,7 +168,7 @@
   font-weight: normal;
   font-size: 13px;
   line-height: 15.73px;
-  color: #000000;
+  color: #000;
   margin: 0;
   text-align: center;
 }
@@ -240,7 +240,7 @@
   }
 }
 .footer__copyright {
-  font-family: "Inter", "Helvetica", "Arial", sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -334,7 +334,7 @@
   font-style: normal;
   font-weight: normal;
   cursor: pointer;
-  color: #a9a9a9;
+  color: #545454;
   background: unset;
   border: unset;
 }
@@ -368,7 +368,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: white;
+  color: #fff;
   text-decoration: none;
   transition: opacity 0.4s ease-out;
 }
@@ -397,7 +397,7 @@
   max-width: 100%;
   padding: 0;
   margin: 0 auto;
-  font-family: "Inter", "Helvetica", "Arial", sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -433,7 +433,7 @@
   margin: 0;
   max-width: 294px;
   min-height: 39px;
-  font-family: "Inter", "Helvetica", "Arial", sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 42px;
@@ -454,7 +454,7 @@
   max-width: 336px;
   min-height: 18px;
   margin: 0;
-  font-family: "Inter", "Helvetica", "Arial", sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -623,7 +623,7 @@
 .popup__container {
   width: 430px;
   min-height: 330px;
-  background-color: white;
+  background-color: #fff;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -644,7 +644,7 @@
   font-family: "Inter", Arial, sans-serif;
   font-style: normal;
   font-size: 24px;
-  color: #000000;
+  color: #000;
   text-align: center;
   margin: 0 auto;
   font-weight: 900;
@@ -659,7 +659,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: #000000;
+  color: #000;
   border: 0;
   outline: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -719,7 +719,7 @@
   font-size: 12px;
   line-height: 15px;
   visibility: hidden;
-  color: #FF0000;
+  color: red;
   margin-left: 36px;
   min-height: 30px;
 }
@@ -748,13 +748,13 @@
 }
 .popup__image-title {
   margin: 0;
-  font-family: "Inter", "Helvetica", "Arial", sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   margin-top: 10px;
-  color: #ffffff;
+  color: #fff;
 }
 .popup__set {
   display: flex;
@@ -821,8 +821,4 @@
 .popup_opened {
   visibility: visible;
   opacity: 1;
-}
-
-.image-popup {
-  background-color: rgba(0, 0, 0, 0.9);
 }/*# sourceMappingURL=style.css.map */
