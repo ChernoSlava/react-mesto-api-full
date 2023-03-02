@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { useForm } from "../hooks/useForm";
+import { useForm } from '../hooks/useForm';
 
 export default function Login({ onAuthorization }) {
   const { values, handleChange } = useForm({});
@@ -22,8 +22,8 @@ export default function Login({ onAuthorization }) {
           autoComplete="off"
           type="email"
           required
-          value={values.email || ""}
-        ></input>
+          value={values.email || ''}
+        />
         <input
           className="auth__input"
           name="password"
@@ -32,8 +32,8 @@ export default function Login({ onAuthorization }) {
           type="password"
           onChange={handleChange}
           required
-          value={values.password || ""}
-        ></input>
+          value={values.password || ''}
+        />
         <button className="button auth__button-submit" type="submit">
           Войти
         </button>

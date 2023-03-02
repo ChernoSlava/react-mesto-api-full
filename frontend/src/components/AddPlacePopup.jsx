@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-import PopupWithForm from "./PopupWithForm";
+import { useForm } from '../hooks/useForm';
 
-import { useForm } from "../hooks/useForm";
+import PopupWithForm from './PopupWithForm';
 
 export default function AddPlacePopup({
   onAddPlace,
@@ -12,10 +12,10 @@ export default function AddPlacePopup({
 }) {
   const { values, handleChange, resetForm } = useForm({});
 
-  function handleSubmit(e) {
+  const handleSubmit = e => {
     e.preventDefault();
     onAddPlace(values);
-  }
+  };
 
   useEffect(() => {
     resetForm();
@@ -28,9 +28,8 @@ export default function AddPlacePopup({
       isOpen={isOpen}
       onClose={onClose}
       btnClass="form-card-btn"
-      buttonText={isLoading ? "Создание..." : "Создать"}
-      onSubmit={handleSubmit}
-    >
+      buttonText={isLoading ? 'Создание...' : 'Создать'}
+      onSubmit={handleSubmit}>
       <fieldset className="popup__set">
         <input
           id="title"
@@ -41,7 +40,7 @@ export default function AddPlacePopup({
           minLength="2"
           maxLength="30"
           required
-          value={values.name || ""}
+          value={values.name || ''}
           onChange={handleChange}
         />
         <span className="popup__field-error popup__field-error_field_title">
@@ -54,7 +53,7 @@ export default function AddPlacePopup({
           className="popup__field popup__field_type_link"
           placeholder="Ссылка на картинку"
           required
-          value={values.link || ""}
+          value={values.link || ''}
           onChange={handleChange}
         />
         <span className="popup__field-error popup__field-error_field_link">

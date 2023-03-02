@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { useForm } from "../hooks/useForm";
+import { useForm } from '../hooks/useForm';
 
 export default function Register({ onRegistration }) {
   const { values, handleChange } = useForm({});
@@ -23,8 +23,8 @@ export default function Register({ onRegistration }) {
           autoComplete="off"
           type="email"
           required
-          value={values.email || ""}
-        ></input>
+          value={values.email || ''}
+        />
         <input
           onChange={handleChange}
           className="auth__input"
@@ -33,8 +33,8 @@ export default function Register({ onRegistration }) {
           autoComplete="off"
           type="password"
           required
-          value={values.password || ""}
-        ></input>
+          value={values.password || ''}
+        />
         <button className="button auth__button-submit" type="submit">
           Зарегистрироваться
         </button>

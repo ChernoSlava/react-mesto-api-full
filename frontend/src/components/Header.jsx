@@ -1,8 +1,7 @@
-import React from "react";
-import { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import React, { useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
-import logo from "../images/logo.svg";
+import logo from '../images/logo.svg';
 
 export default function Header({ loggedIn, onSingOut, authorizatUserEmail }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -19,21 +18,19 @@ export default function Header({ loggedIn, onSingOut, authorizatUserEmail }) {
   const location = useLocation();
 
   return (
-    <header className={loggedIn ? "header header_burger" : "header"}>
+    <header className={loggedIn ? 'header header_burger' : 'header'}>
       {loggedIn && (
         <div
           className={
             menuIsOpen
-              ? "header__container header__container_opened"
-              : "header__container"
-          }
-        >
+              ? 'header__container header__container_opened'
+              : 'header__container'
+          }>
           <address className="header__address">{authorizatUserEmail}</address>
           <button
             className="header__exitBtn"
             type="button"
-            onClick={handleSignOut}
-          >
+            onClick={handleSignOut}>
             Выйти
           </button>
         </div>
@@ -49,8 +46,8 @@ export default function Header({ loggedIn, onSingOut, authorizatUserEmail }) {
           <button
             className={
               menuIsOpen
-                ? "header__burger-btn header__burger-btn_opened"
-                : "header__burger-btn"
+                ? 'header__burger-btn header__burger-btn_opened'
+                : 'header__burger-btn'
             }
             type="button"
             aria-label="кнопка меню"
@@ -59,12 +56,12 @@ export default function Header({ loggedIn, onSingOut, authorizatUserEmail }) {
         )}
         {!loggedIn && (
           <nav>
-            {location.pathname === "/sign-in" && (
+            {location.pathname === '/sign-in' && (
               <NavLink className="header__navlink" to="/sign-up">
                 Регистрация
               </NavLink>
             )}
-            {location.pathname === "/sign-up" && (
+            {location.pathname === '/sign-up' && (
               <NavLink className="header__navlink" to="/sign-in">
                 Войти
               </NavLink>

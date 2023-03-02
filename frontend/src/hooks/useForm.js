@@ -1,9 +1,9 @@
-import { useState, useCallback } from "react";
+import { useCallback, useState } from 'react';
 
 export function useForm() {
   const [values, setValues] = useState({});
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
   };
@@ -12,7 +12,7 @@ export function useForm() {
     (newValues = {}) => {
       setValues(newValues);
     },
-    [setValues]
+    [setValues],
   );
   return { values, handleChange, resetForm };
 }

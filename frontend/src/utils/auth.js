@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 class Auth {
   constructor(data) {
     this._url = data.baseUrl;
@@ -8,7 +9,9 @@ class Auth {
     if (res.ok) {
       return res.json();
     }
-    return Promise.reject(`Что-то упало: ${res.status}`);
+    return Promise.reject(
+      new Error(`Что-то упало в _checkMainResponse: ${res.status}`),
+    );
   }
 
   _request(url, options) {
@@ -17,7 +20,7 @@ class Auth {
 
   registration(data) {
     return this._request(`${this._url}/signup`, {
-      method: "POST",
+      method: 'POST',
       headers: this._headers,
       body: JSON.stringify({
         password: data.password,
@@ -28,7 +31,7 @@ class Auth {
 
   authorization(data) {
     return this._request(`${this._url}/signin`, {
-      method: "POST",
+      method: 'POST',
       headers: this._headers,
       body: JSON.stringify({
         password: data.password,
@@ -36,9 +39,10 @@ class Auth {
       }),
     });
   }
+
   checkToken(token) {
     return this._request(`${this._url}/users/me`, {
-      method: "GET",
+      method: 'GET',
       headers: {
         ...this._headers,
         Authorization: `Bearer ${token}`,
@@ -55,11 +59,10 @@ class Auth {
 // });
 
 const auth = new Auth({
-  baseUrl: "http://localhost:3000",
+  baseUrl: 'http://localhost:3000',
   headers: {
-    "Content-Type": "application/json",
+    'Content-Type': 'application/json',
   },
 });
-
 
 export default auth;

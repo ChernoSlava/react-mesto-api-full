@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 class Api {
   constructor({ url, headers }) {
     this._url = url;
@@ -8,53 +9,58 @@ class Api {
     if (res.ok) {
       return res.json();
     }
-    return Promise.reject(`Что-то упало: ${res.status}`);
+    return Promise.reject(
+      new Error(`Что-то упало в _checkResponse: ${res.status}`),
+    );
   }
 
   _request(url, options) {
-    const token = localStorage.getItem("jwt");
-    return fetch(url, {...options, headers: {...options.headers, Authorization: `Bearer ${token}`}}).then(this._checkResponse);
+    const token = localStorage.getItem('jwt');
+    return fetch(url, {
+      ...options,
+      headers: { ...options.headers, Authorization: `Bearer ${token}` },
+    }).then(this._checkResponse);
   }
 
   setUserAvatarToServer(avatar) {
     return this._request(`${this._url}/users/me/avatar`, {
-      method: "PATCH",
+      method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify(avatar),
     });
   }
+
   changeLikeCardStatus(id, isLiked) {
     if (isLiked) {
       return this.deleteLike(id);
-    } else {
-      return this.doLike(id);
     }
+    return this.doLike(id);
   }
 
   deleteLike(id) {
     return this._request(`${this._url}/cards/${id}/likes`, {
-      method: "DELETE",
+      method: 'DELETE',
       headers: this._headers,
     });
   }
 
   doLike(id) {
     return this._request(`${this._url}/cards/${id}/likes`, {
-      method: "PUT",
+      method: 'PUT',
       headers: this._headers,
     });
   }
 
   deleteCard(id) {
     return this._request(`${this._url}/cards/${id}`, {
-      method: "DELETE",
+      method: 'DELETE',
       headers: this._headers,
     });
   }
 
   postCard(data) {
     return this._request(`${this._url}/cards`, {
-      method: "POST",
+      method: 'POST',
       headers: this._headers,
       body: JSON.stringify(data),
     });
@@ -62,7 +68,7 @@ class Api {
 
   setUserInfoToServer(data) {
     return this._request(`${this._url}/users/me`, {
-      method: "PATCH",
+      method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify(data),
     });
@@ -74,14 +80,14 @@ class Api {
 
   getCards() {
     return this._request(`${this._url}/cards`, {
-      method: "GET",
+      method: 'GET',
       headers: this._headers,
     });
   }
 
   getUserInfoFromServer() {
     return this._request(`${this._url}/users/me`, {
-      method: "GET",
+      method: 'GET',
       headers: this._headers,
     });
   }
@@ -94,9 +100,9 @@ class Api {
 //   },
 // });
 const api = new Api({
-  url: "http://localhost:3000",
+  url: 'http://localhost:3000',
   headers: {
-    "Content-Type": "application/json",
+    'Content-Type': 'application/json',
   },
 });
 

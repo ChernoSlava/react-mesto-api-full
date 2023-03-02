@@ -13,9 +13,11 @@ Frontend часть проекта Mesto
 ## Технологический стек
 - HTML5: семантические теги,
 - CSS 3: медиа-запросы,
+- Preprocessor SASS,
 - React js,
 - Higher-Order Component,
-- SASS.
+- ESLint,
+- Prettier.
 
 ---
 

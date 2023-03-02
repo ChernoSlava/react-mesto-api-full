@@ -1,6 +1,6 @@
-import { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from 'react';
 
-import PopupWithForm from "./PopupWithForm";
+import PopupWithForm from './PopupWithForm';
 
 export default function EditAvatarPopup({
   onUpdateAvatar,
@@ -8,18 +8,18 @@ export default function EditAvatarPopup({
   onClose,
   isLoading,
 }) {
-  const avatarRef = useRef("");
+  const avatarRef = useRef('');
 
-  function handleSubmit(e) {
+  const handleSubmit = e => {
     e.preventDefault();
 
     onUpdateAvatar({
       avatar: avatarRef.current.value,
     });
-  }
+  };
 
   useEffect(() => {
-    avatarRef.current.value = "";
+    avatarRef.current.value = '';
   }, [isOpen]);
 
   return (
@@ -29,9 +29,8 @@ export default function EditAvatarPopup({
       isOpen={isOpen}
       onClose={onClose}
       btnClass="avatar"
-      buttonText={isLoading ? "Сохранение..." : "Сохранить"}
-      onSubmit={handleSubmit}
-    >
+      buttonText={isLoading ? 'Сохранение...' : 'Сохранить'}
+      onSubmit={handleSubmit}>
       <fieldset className="popup__set">
         <input
           type="url"

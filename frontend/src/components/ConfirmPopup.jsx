@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import PopupWithForm from "./PopupWithForm";
+import PopupWithForm from './PopupWithForm';
 
 export default function ConfirmPopup({ isOpen, onClose, onSubmit, isLoading }) {
   return (
@@ -9,7 +9,7 @@ export default function ConfirmPopup({ isOpen, onClose, onSubmit, isLoading }) {
       title="Вы уверены?"
       container="popup__container-delete"
       btnClass="delete"
-      buttonText={isLoading ? "Удаление..." : "Да"}
+      buttonText={isLoading ? 'Удаление...' : 'Да'}
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={onSubmit}

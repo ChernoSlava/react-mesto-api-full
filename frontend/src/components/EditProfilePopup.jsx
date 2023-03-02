@@ -1,8 +1,8 @@
-import { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from 'react';
 
-import PopupWithForm from "./PopupWithForm";
+import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import PopupWithForm from './PopupWithForm';
 
 export default function EditProfilePopup({
   isOpen,
@@ -11,9 +11,10 @@ export default function EditProfilePopup({
   isLoading,
 }) {
   const currentUser = useContext(CurrentUserContext);
+  const { name, about } = currentUser;
 
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+  const [title, setName] = useState('');
+  const [description, setDescription] = useState('');
 
   function handleChangeName(e) {
     setName(e.target.value);
@@ -22,18 +23,18 @@ export default function EditProfilePopup({
     setDescription(e.target.value);
   }
 
-  function handleSubmit(e) {
+  const handleSubmit = e => {
     e.preventDefault();
     onUpdateUser({
-      name,
+      name: title,
       about: description,
     });
-  }
+  };
 
   useEffect(() => {
     if (isOpen) {
-      setName(currentUser.name);
-      setDescription(currentUser.about);
+      setName(name);
+      setDescription(about);
     }
   }, [currentUser, isOpen]);
 
@@ -44,9 +45,8 @@ export default function EditProfilePopup({
       isOpen={isOpen}
       onClose={onClose}
       btnClass="profile-btn"
-      buttonText={isLoading ? "Сохранение..." : "Сохранить"}
-      onSubmit={handleSubmit}
-    >
+      buttonText={isLoading ? 'Сохранение...' : 'Сохранить'}
+      onSubmit={handleSubmit}>
       <fieldset className="popup__set">
         <input
           id="name"
@@ -57,7 +57,7 @@ export default function EditProfilePopup({
           minLength="2"
           maxLength="40"
           required
-          value={name || ""}
+          value={title || ''}
           onChange={handleChangeName}
         />
         <span className="popup__field-error popup__field-error_field_name">
@@ -72,7 +72,7 @@ export default function EditProfilePopup({
           minLength="2"
           maxLength="200"
           required
-          value={description || ""}
+          value={description || ''}
           onChange={handleChangeDescription}
         />
         <span className="popup__field-error popup__field-error_field_job">

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import Popup from "./Popup";
+import Popup from './Popup';
 
 export default function PopupWithForm({
   name,
@@ -20,18 +20,17 @@ export default function PopupWithForm({
         <form
           className={`popup__form ${name}-form`}
           name={name}
-          onSubmit={onSubmit}
-        >
+          onSubmit={onSubmit}>
           <button
             type="button"
+            aria-label="Close"
             className="popup__close-icon"
             onClick={onClose}
           />
           {children}
           <button
             type="submit"
-            className={`popup__submit-button popup__submit-${btnClass}`}
-          >
+            className={`popup__submit-button popup__submit-${btnClass}`}>
             {buttonText}
           </button>
         </form>

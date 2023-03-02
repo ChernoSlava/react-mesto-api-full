@@ -1,27 +1,27 @@
-import { useContext } from "react";
+import React, { useContext } from 'react';
 
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 function Card({ card, onCardClick, onCardLike, onCardForDelete }) {
   const currentUser = useContext(CurrentUserContext);
-
-  const isOwnCard = (card.owner._id || card.owner) === currentUser._id;
-  const isLiked = card.likes.some((i) => (i._id || i) === currentUser._id);
+  const { id } = currentUser;
+  const isOwnCard = (card.owner._id || card.owner) === id;
+  const isLiked = card.likes.some(i => (i._id || i) === id);
 
   const cardDeleteButtonClassName = `${
     isOwnCard
-      ? "element__delete-button"
-      : "element__delete-button element__delete-button_hidden"
+      ? 'element__delete-button'
+      : 'element__delete-button element__delete-button_hidden'
   }`;
   const cardLikeButtonClassName = `${
-    isLiked ? "element__heart element__heart_active" : "element__heart"
+    isLiked ? 'element__heart element__heart_active' : 'element__heart'
   }`;
 
   function handleCardClick() {
     onCardClick(card);
   }
   function handleCardKeyDown(e) {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       onCardClick(card);
     }
   }
@@ -36,10 +36,12 @@ function Card({ card, onCardClick, onCardLike, onCardForDelete }) {
     <li className="element">
       <button
         type="button"
+        aria-label="Delete"
         onClick={handleCardDelete}
         className={cardDeleteButtonClassName}
       />
       <img
+        role="presentation"
         className="element__image"
         src={card.link}
         alt={card.name}
@@ -51,6 +53,7 @@ function Card({ card, onCardClick, onCardLike, onCardForDelete }) {
         <div>
           <button
             onClick={handleLikeClick}
+            aria-label="Like"
             type="button"
             name="heart"
             className={cardLikeButtonClassName}
