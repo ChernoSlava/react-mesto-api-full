@@ -1,4 +1,4 @@
-# Проект: Frontend проекта Mesto
+# Проект: Mesto Frontend 
 
 ## Описание работы
 
@@ -17,5 +17,11 @@ Frontend часть проекта Mesto
 - Higher-Order Component,
 - SASS.
 
-## Ссылка на репозиторий с проектом без использования React можно найти по ссылке => [Mesto](https://github.com/ChernoSlava/Mesto)
+---
+
+## Запуск проекта
+
+`npm run start` — запускает frontend проекта
+___
+## Ссылка на репозиторий с проектом => [Mesto](https://github.com/ChernoSlava/react-mesto-api-full/tree/main/frontend)
 
