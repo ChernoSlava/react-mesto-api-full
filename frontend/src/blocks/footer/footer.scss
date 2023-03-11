@@ -1,0 +1,21 @@
+@import '../../sass/variables.scss';
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 15.6%;
+  display: flex;
+
+  @media screen and (max-width: 320px) {
+    padding-left: 19px;
+  }
+
+  &__copyright {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $greyColor;
+  }
+}

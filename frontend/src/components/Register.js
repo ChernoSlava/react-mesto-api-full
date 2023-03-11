@@ -27,7 +27,7 @@ export default function Register({ onRegistration }) {
         ></input>
         <input
           onChange={handleChange}
-          className="auth__input second"
+          className="auth__input"
           name="password"
           placeholder="Пароль"
           autoComplete="off"

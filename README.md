@@ -18,7 +18,8 @@
 - Helmet,
 - Express rate lımıt,
 - Celebrate,
-- Middlewares
+- Middlewares,
+- SASS.
 
 
 ## Установка и запуск

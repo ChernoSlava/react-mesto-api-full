@@ -1,0 +1,30 @@
+@import '../../sass/variables.scss';
+
+.elements {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: $largeScreen;
+  row-gap: 20px;
+  column-gap: 17px;
+  padding-top: 50px;
+  padding-left: 15.6%;
+  padding-right: 15.6%;
+  justify-content: center;
+  list-style-type: none;
+  margin: auto;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: $middleScreen;
+    justify-items: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: $smallScreen;
+    justify-items: center;
+  }
+
+
+  @media screen and (max-width: 320px) {
+    width: 282px;
+  }
+}
